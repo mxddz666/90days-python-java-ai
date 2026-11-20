@@ -1,6 +1,6 @@
 # Day 64 · Pandas Series 与 DataFrame
 
-> 阶段：AI｜AI / 机器学习 / LLM
+> 阶段：AI｜AI / 机器学习 / LLM｜日期：2027-01-23（周六）
 
 ## 学习目标
 

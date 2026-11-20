@@ -1,6 +1,6 @@
 # Day 40 · 多态、抽象类与接口
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-30（周三）
 
 ## 学习目标
 

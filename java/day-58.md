@@ -1,6 +1,6 @@
 # Day 58 · Spring Data JPA
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-17（周日）
 
 ## 学习目标
 

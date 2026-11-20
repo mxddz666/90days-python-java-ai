@@ -1,6 +1,6 @@
 # Day 43 · 异常处理机制
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-02（周六）
 
 ## 学习目标
 

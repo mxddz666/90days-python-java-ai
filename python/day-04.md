@@ -1,6 +1,6 @@
 # Day 04 · 条件分支 if / elif / else
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-11-24（周二）
 
 ## 学习目标
 

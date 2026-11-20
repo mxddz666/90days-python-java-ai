@@ -1,6 +1,6 @@
 # Day 52 · JVM 内存模型与 GC
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-11（周一）
 
 ## 学习目标
 

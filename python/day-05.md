@@ -1,6 +1,6 @@
 # Day 05 · 循环 for 与 while
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-11-25（周三）
 
 ## 学习目标
 

@@ -1,6 +1,6 @@
 # Day 44 · 集合框架：List 与 ArrayList
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-03（周日）
 
 ## 学习目标
 

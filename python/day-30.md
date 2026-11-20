@@ -1,6 +1,6 @@
 # Day 30 · Python 阶段复盘与测评
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-20（周日）
 
 ## 学习目标
 

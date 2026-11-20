@@ -1,6 +1,6 @@
 # Day 75 · scikit-learn Pipeline
 
-> 阶段：AI｜AI / 机器学习 / LLM
+> 阶段：AI｜AI / 机器学习 / LLM｜日期：2027-02-03（周三）
 
 ## 学习目标
 

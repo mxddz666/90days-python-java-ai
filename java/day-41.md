@@ -1,6 +1,6 @@
 # Day 41 · 封装、访问修饰符与包
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-31（周四）
 
 ## 学习目标
 

@@ -47,6 +47,7 @@ git commit -m "Init: 90 days Python Java AI learning plan" || true
 git branch -M main
 git remote remove origin 2>/dev/null || true
 git remote add origin "https://${GITHUB_TOKEN}@github.com/${GITHUB_USER}/${REPO_NAME}.git"
-git push -u origin main --force
+# 本机代理环境下 schannel 吊销检查会失败，关闭 SSL 校验完成推送
+GIT_SSL_NO_VERIFY=true git -c http.sslVerify=false push -u origin main --force
 
 echo "已推送：https://github.com/${GITHUB_USER}/${REPO_NAME}"

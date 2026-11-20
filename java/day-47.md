@@ -1,6 +1,6 @@
 # Day 47 · Stream API
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-06（周三）
 
 ## 学习目标
 

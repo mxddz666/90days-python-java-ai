@@ -1,6 +1,6 @@
 # Day 17 · JSON 与 CSV 数据处理
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-07（周一）
 
 ## 学习目标
 

@@ -1,6 +1,6 @@
 # Day 38 · this、static 与 final
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-28（周一）
 
 ## 学习目标
 

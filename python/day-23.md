@@ -1,6 +1,6 @@
 # Day 23 · HTTP 请求与 requests 库
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-13（周日）
 
 ## 学习目标
 

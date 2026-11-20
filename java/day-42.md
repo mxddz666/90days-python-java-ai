@@ -1,6 +1,6 @@
 # Day 42 · String、StringBuilder 与常用 API
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-01（周五）
 
 ## 学习目标
 

@@ -1,6 +1,6 @@
 # Day 60 · Java 阶段复盘与测评
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-19（周二）
 
 ## 学习目标
 

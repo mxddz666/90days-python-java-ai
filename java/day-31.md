@@ -1,6 +1,6 @@
 # Day 31 · JDK 环境搭建与第一个 Java 程序
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-21（周一）
 
 ## 学习目标
 

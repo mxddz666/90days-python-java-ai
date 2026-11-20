@@ -1,6 +1,6 @@
 # Day 01 · Python 环境搭建与第一个程序
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-11-21（周六）
 
 ## 学习目标
 

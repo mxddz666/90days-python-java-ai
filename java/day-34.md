@@ -1,6 +1,6 @@
 # Day 34 · 条件与循环控制
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-24（周四）
 
 ## 学习目标
 

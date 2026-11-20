@@ -1,6 +1,6 @@
 # Day 27 · SQLite 数据库操作
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-17（周四）
 
 ## 学习目标
 

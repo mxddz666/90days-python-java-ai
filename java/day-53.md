@@ -1,6 +1,6 @@
 # Day 53 · Maven 与项目构建
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-12（周二）
 
 ## 学习目标
 

@@ -1,6 +1,6 @@
 # Day 66 · 数据可视化 Matplotlib 与 Seaborn
 
-> 阶段：AI｜AI / 机器学习 / LLM
+> 阶段：AI｜AI / 机器学习 / LLM｜日期：2027-01-25（周一）
 
 ## 学习目标
 

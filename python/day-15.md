@@ -1,6 +1,6 @@
 # Day 15 · 异常处理 try / except / finally
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-05（周六）
 
 ## 学习目标
 

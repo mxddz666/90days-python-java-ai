@@ -1,6 +1,6 @@
 # Day 26 · Flask Web 开发入门
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-16（周三）
 
 ## 学习目标
 

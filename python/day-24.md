@@ -1,6 +1,6 @@
 # Day 24 · 网页解析 BeautifulSoup
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-12-14（周一）
 
 ## 学习目标
 

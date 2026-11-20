@@ -5,12 +5,23 @@
 """
 
 import sys
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from plan_data import PYTHON, JAVA, AI  # noqa: E402
+
+# 学习计划起始日期：Day 01 = 2026-11-21（明天）。改这一行即可整体平移排期。
+START_DATE = date(2026, 11, 21)
+WEEKDAY_CN = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+
+
+def fmt_day(day):
+    d = START_DATE + timedelta(days=day - 1)
+    return f"{d.isoformat()}（{WEEKDAY_CN[d.weekday()]}）"
+
 
 STAGES = [
     ("python", "Python 基础到实战", PYTHON, 1),
@@ -38,7 +49,7 @@ def day_file(stage_name, stage_title, start, index, data):
     stage_label = {"python": "Python", "java": "Java", "ai": "AI"}[stage_name]
     return f"""# Day {day:02d} · {title}
 
-> 阶段：{stage_label}｜{stage_title}
+> 阶段：{stage_label}｜{stage_title}｜日期：{fmt_day(day)}
 
 ## 学习目标
 
@@ -72,10 +83,11 @@ def day_file(stage_name, stage_title, start, index, data):
 
 
 def stage_readme(stage_name, stage_title, days, start):
-    lines = [f"# {stage_title}", "", f"本阶段共 {len(days)} 天（Day {start:02d} - Day {start + len(days) - 1:02d}）。", "", "## 每日任务", ""]
+    end_day = start + len(days) - 1
+    lines = [f"# {stage_title}", "", f"本阶段共 {len(days)} 天（Day {start:02d} - Day {end_day:02d}），{fmt_day(start)} 至 {fmt_day(end_day)}。", "", "## 每日任务", ""]
     for i, data in enumerate(days):
         day = start + i
-        lines.append(f"- [Day {day:02d} · {data[0]}](day-{day:02d}.md)")
+        lines.append(f"- [Day {day:02d} · {fmt_day(day)} · {data[0]}](day-{day:02d}.md)")
     lines += ["", "## 阶段说明", "", "每天按「学习目标 → 知识点 → 实践任务 → 验收标准」顺序推进。", "完成后回到每日文件底部打卡，并在根目录 CHECKLIST.md 勾选对应日期。", ""]
     return "\n".join(lines)
 
@@ -87,11 +99,13 @@ def build_readme():
 
 ## 路线总览
 
-| 阶段 | 天数 | 方向 | 结业产出 |
-| --- | --- | --- | --- |
-| 第一阶段 | Day 01 - Day 30 | Python 基础到实战 | 命令行待办工具 |
-| 第二阶段 | Day 31 - Day 60 | Java 基础到 Spring Boot | 图书管理系统 |
-| 第三阶段 | Day 61 - Day 90 | AI / 机器学习 / LLM | 情感分析系统 + 智能问答机器人 |
+起止日期：2026-11-21（周六）开始，2027-02-18（周四）结束，共 90 天。
+
+| 阶段 | 天数 | 日期区间 | 方向 | 结业产出 |
+| --- | --- | --- | --- | --- |
+| 第一阶段 | Day 01 - Day 30 | 2026-11-21 ~ 2026-12-20 | Python 基础到实战 | 命令行待办工具 |
+| 第二阶段 | Day 31 - Day 60 | 2026-12-21 ~ 2027-01-19 | Java 基础到 Spring Boot | 图书管理系统 |
+| 第三阶段 | Day 61 - Day 90 | 2027-01-20 ~ 2027-02-18 | AI / 机器学习 / LLM | 情感分析系统 + 智能问答机器人 |
 
 ## 每日结构
 
@@ -143,23 +157,23 @@ def build_readme():
 
 
 def build_roadmap():
-    lines = ["# 90 天路线速查表", "", "| Day | 阶段 | 主题 |", "| --- | --- | --- |"]
+    lines = ["# 90 天路线速查表", "", f"起始日期：{fmt_day(1)}", "", "| Day | 日期 | 阶段 | 主题 |", "| --- | --- | --- | --- |"]
     for stage_name, stage_title, days, start in STAGES:
         label = {"python": "Python", "java": "Java", "ai": "AI"}[stage_name]
         for i, data in enumerate(days):
             day = start + i
-            lines.append(f"| {day:02d} | {label} | [{data[0]}]({stage_name}/day-{day:02d}.md) |")
+            lines.append(f"| {day:02d} | {fmt_day(day)} | {label} | [{data[0]}]({stage_name}/day-{day:02d}.md) |")
     lines.append("")
     return "\n".join(lines)
 
 
 def build_checklist():
-    lines = ["# 90 天打卡清单", "", "完成一天勾选一项。", ""]
+    lines = ["# 90 天打卡清单", "", f"起始日期：{fmt_day(1)}，完成一天勾选一项。", ""]
     for stage_name, stage_title, days, start in STAGES:
         lines += [f"## {stage_title}", ""]
         for i, data in enumerate(days):
             day = start + i
-            lines.append(f"- [ ] Day {day:02d} · {data[0]}（[任务]({stage_name}/day-{day:02d}.md)）")
+            lines.append(f"- [ ] Day {day:02d}（{fmt_day(day)}）· {data[0]}（[任务]({stage_name}/day-{day:02d}.md)）")
         lines.append("")
     return "\n".join(lines)
 
@@ -311,7 +325,8 @@ git push origin main
 def build_push_script():
     return """#!/usr/bin/env bash
 # 把本仓库推送到 GitHub。
-# 用法：GITHUB_USER=你的用户名 GITHUB_TOKEN=你的token bash scripts/push-to-github.sh
+# 用法：GITHUB_TOKEN=你的token bash scripts/push-to-github.sh
+# 用户名自动通过 token 查询；需要手动指定时加 GITHUB_USER=用户名
 set -euo pipefail
 
 GITHUB_USER="${GITHUB_USER:-}"
@@ -319,11 +334,21 @@ GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 REPO_NAME="90days-python-java-ai"
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-if [ -z "$GITHUB_USER" ] || [ -z "$GITHUB_TOKEN" ]; then
-  echo "缺少 GITHUB_USER 或 GITHUB_TOKEN 环境变量"
-  echo "用法：GITHUB_USER=用户名 GITHUB_TOKEN=token bash scripts/push-to-github.sh"
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "缺少 GITHUB_TOKEN 环境变量"
+  echo "用法：GITHUB_TOKEN=token bash scripts/push-to-github.sh"
   exit 1
 fi
+
+if [ -z "$GITHUB_USER" ]; then
+  echo "正在通过 token 查询 GitHub 用户名..."
+  GITHUB_USER="$(curl -sS --ssl-no-revoke -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" https://api.github.com/user | python -c "import sys,json; print(json.load(sys.stdin)['login'])" 2>/dev/null)"
+  if [ -z "$GITHUB_USER" ]; then
+    echo "用户名识别失败，请手动指定：GITHUB_USER=用户名 GITHUB_TOKEN=token bash scripts/push-to-github.sh"
+    exit 1
+  fi
+fi
+echo "GitHub 用户：$GITHUB_USER"
 
 cd "$REPO_DIR"
 
@@ -347,7 +372,8 @@ git commit -m "Init: 90 days Python Java AI learning plan" || true
 git branch -M main
 git remote remove origin 2>/dev/null || true
 git remote add origin "https://${GITHUB_TOKEN}@github.com/${GITHUB_USER}/${REPO_NAME}.git"
-git push -u origin main --force
+# 本机代理环境下 schannel 吊销检查会失败，关闭 SSL 校验完成推送
+GIT_SSL_NO_VERIFY=true git -c http.sslVerify=false push -u origin main --force
 
 echo "已推送：https://github.com/${GITHUB_USER}/${REPO_NAME}"
 """

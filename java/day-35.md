@@ -1,6 +1,6 @@
 # Day 35 · 数组与多维数组
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-25（周五）
 
 ## 学习目标
 

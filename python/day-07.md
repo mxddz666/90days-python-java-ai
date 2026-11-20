@@ -1,6 +1,6 @@
 # Day 07 · 字典 dict 与集合 set
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-11-27（周五）
 
 ## 学习目标
 

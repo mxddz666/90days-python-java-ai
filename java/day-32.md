@@ -1,6 +1,6 @@
 # Day 32 · 变量与基本数据类型
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2026-12-22（周二）
 
 ## 学习目标
 

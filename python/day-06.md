@@ -1,6 +1,6 @@
 # Day 06 · 列表 list 与元组 tuple
 
-> 阶段：Python｜Python 基础到实战
+> 阶段：Python｜Python 基础到实战｜日期：2026-11-26（周四）
 
 ## 学习目标
 

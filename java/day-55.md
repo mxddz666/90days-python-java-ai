@@ -1,6 +1,6 @@
 # Day 55 · JDBC 与数据库交互
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-14（周四）
 
 ## 学习目标
 

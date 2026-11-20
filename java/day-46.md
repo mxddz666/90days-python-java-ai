@@ -1,6 +1,6 @@
 # Day 46 · Lambda 表达式与函数式接口
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-05（周二）
 
 ## 学习目标
 

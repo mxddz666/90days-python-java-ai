@@ -1,6 +1,6 @@
 # Day 59 · 实战项目二：图书管理系统
 
-> 阶段：Java｜Java 基础到 Spring Boot
+> 阶段：Java｜Java 基础到 Spring Boot｜日期：2027-01-18（周一）
 
 ## 学习目标
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # 把本仓库推送到 GitHub。
-# 用法：GITHUB_USER=你的用户名 GITHUB_TOKEN=你的token bash scripts/push-to-github.sh
+# 用法：GITHUB_TOKEN=你的token bash scripts/push-to-github.sh
+# 用户名自动通过 token 查询；需要手动指定时加 GITHUB_USER=用户名
 set -euo pipefail
 
 GITHUB_USER="${GITHUB_USER:-}"
@@ -8,11 +9,21 @@ GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 REPO_NAME="90days-python-java-ai"
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 
-if [ -z "$GITHUB_USER" ] || [ -z "$GITHUB_TOKEN" ]; then
-  echo "缺少 GITHUB_USER 或 GITHUB_TOKEN 环境变量"
-  echo "用法：GITHUB_USER=用户名 GITHUB_TOKEN=token bash scripts/push-to-github.sh"
+if [ -z "$GITHUB_TOKEN" ]; then
+  echo "缺少 GITHUB_TOKEN 环境变量"
+  echo "用法：GITHUB_TOKEN=token bash scripts/push-to-github.sh"
   exit 1
 fi
+
+if [ -z "$GITHUB_USER" ]; then
+  echo "正在通过 token 查询 GitHub 用户名..."
+  GITHUB_USER="$(curl -sS --ssl-no-revoke -H "Authorization: Bearer $GITHUB_TOKEN" -H "Accept: application/vnd.github+json" https://api.github.com/user | python -c "import sys,json; print(json.load(sys.stdin)['login'])" 2>/dev/null)"
+  if [ -z "$GITHUB_USER" ]; then
+    echo "用户名识别失败，请手动指定：GITHUB_USER=用户名 GITHUB_TOKEN=token bash scripts/push-to-github.sh"
+    exit 1
+  fi
+fi
+echo "GitHub 用户：$GITHUB_USER"
 
 cd "$REPO_DIR"
 

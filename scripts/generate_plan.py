@@ -386,6 +386,7 @@ echo "已推送：https://github.com/${GITHUB_USER}/${REPO_NAME}"
 def build_gitignore():
     return """.venv/
 .venv-ai/
+.idea/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/

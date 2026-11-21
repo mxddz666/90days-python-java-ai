@@ -5,11 +5,15 @@
 | 工具 | 版本 | 用途 |
 | --- | --- | --- |
 | Git | 2.40+ | 版本管理 |
-| VS Code | 最新版 | Python 编辑器 |
+| PyCharm | 最新版 | Python IDE（本机已装 PyCharm 2026.2.3） |
 | IntelliJ IDEA Community | 最新版 | Java 编辑器 |
 | Chrome / Edge | 最新版 | 查看文档与调试接口 |
 
 ## Python 环境
+
+PyCharm 本机已装（2026.2.3），开始菜单搜 `PyCharm` 打开。新建项目后配置解释器：
+`File → Settings → Project → Python Interpreter → Add Interpreter → Add Local Interpreter`，
+选择 `python.exe`（本机 Python 3.13.14），或指向下面的 `.venv` 虚拟环境。
 
 ```bash
 # Windows（PowerShell）

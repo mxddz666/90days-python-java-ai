@@ -4,21 +4,21 @@
 
 ## 学习目标
 
-- 安装 Python 3.11+ 与 VS Code
+- 确认 Python 3.11+ 与 PyCharm 可用
 - 理解解释型语言的 execution 流程
 - 写出并运行第一个程序
 
 ## 今日知识点
 
 - python.org 下载安装包，勾选 Add Python to PATH
-- VS Code 安装 Python 扩展
+- PyCharm 新建项目并配置 Python 解释器
 - 终端执行 python --version 验证
 - print() 输出与 # 注释
 
 ## 实践任务
 
 1. 创建 hello.py，输出 Hello, 90 Days!
-2. 分别用 VS Code 运行按钮和终端 python hello.py 运行
+2. 分别用 PyCharm 运行按钮和终端 python hello.py 运行
 3. 在文件顶部写一行注释说明用途
 
 ## 验收标准

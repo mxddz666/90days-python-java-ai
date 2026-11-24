@@ -33,8 +33,8 @@
 
 ## 今日打卡
 
-- [ ] 完成今日知识点学习
-- [ ] 完成全部实践任务
-- [ ] 通过验收标准
-- [ ] 学习时长：____ 小时
-- [ ] 今日笔记 / 遇到的问题：
+- [x] 完成今日知识点学习
+- [x] 完成全部实践任务
+- [x] 通过验收标准
+- [x] 学习时长：____ 小时
+- [x] 今日笔记 / 遇到的问题：elif 从上往下匹配，命中即跳过；边界测试 BMI=18.5→正常、24→偏胖；score 90/75/60 边界正确；三元表达式 `"偶数" if n%2==0 else "奇数"`。缩进错误会抛 IndentationError（unexpected indent / unindent does not match any outer indentation level），Tab 与空格混用抛 TabError，代码块不成立

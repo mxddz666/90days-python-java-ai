@@ -1,17 +1,12 @@
-# Day 03 练习：运算符、表达式与格式化输出
+height = float(input("输入你的身高："))
+weight = float(input("输入你的体重："))
+bmi = weight / (height * height)
 
-# 1. 表达式练习：计算 (2 + 3) * 4 ** 2
-# 手算：4 ** 2 = 16，2 + 3 = 5，5 * 16 = 80
-expr = (2 + 3) * 4 ** 2
-print(f"(2 + 3) * 4 ** 2 = {expr}")       # 80
+if bmi < 18.5:
+    level = "偏瘦"
+elif bmi < 24:
+    level = "正常"
+else:
+    level = "偏胖"
 
-# 2. / 与 // 的区别
-print(f"7 / 2  = {7 / 2}")                # 3.5  普通除法，返回 float
-print(f"7 // 2 = {7 // 2}")               # 3    整除（地板除），丢弃小数
-print(f"7 % 2  = {7 % 2}")                # 1    取余
-
-# 3. 用 // 和 % 分解整数 47 为十位和个位
-number = 47
-tens = number // 10                       # 4
-ones = number % 10                        # 7
-print(f"{number} 的十位是 {tens}，个位是 {ones}")
+print(f"您的 BMI 是 {bmi:.1f}，{level}")

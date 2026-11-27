@@ -10,7 +10,7 @@
 - [x] Day 04（2026-11-24（周二））· 条件分支 if / elif / else（[任务](python/day-04.md)）
 - [x] Day 05（2026-11-25（周三））· 循环 for 与 while（[任务](python/day-05.md)）
 - [x] Day 06（2026-11-26（周四））· 列表 list 与元组 tuple（[任务](python/day-06.md)）
-- [ ] Day 07（2026-11-27（周五））· 字典 dict 与集合 set（[任务](python/day-07.md)）
+- [x] Day 07（2026-11-27（周五））· 字典 dict 与集合 set（[任务](python/day-07.md)）
 - [ ] Day 08（2026-11-28（周六））· 字符串处理与格式化（[任务](python/day-08.md)）
 - [ ] Day 09（2026-11-29（周日））· 函数定义、参数与返回值（[任务](python/day-09.md)）
 - [ ] Day 10（2026-11-30（周一））· 作用域、递归与 lambda（[任务](python/day-10.md)）
